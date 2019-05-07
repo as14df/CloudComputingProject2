@@ -39,16 +39,22 @@
       - GRANT ALL PRIVILEGES ON * . * TO 'admin'@'%';   # Grant privileges to admin
       - FLUSH PRIVILEGES;     # Update privileges
       - exit    # exit database
+      
+## Install depedencies
+
+12. Type in terminal:
+      - sudo apt-get install python3-dev libmysqlclient-dev
+      - pip3 install mysqlclient 
 
 ## Change app settings
 
-12. Go to /CloudComputing/CloudComputingProject/Translator/translate/translate, open settings.py and chenge the ip-address of the container with the database
+13. Go to /CloudComputing/CloudComputingProject/Translator/translate/translate, open settings.py and chenge the ip-address of the container with the database
     
-13. Go to /CloudComputing/CloudComputingProject/Translator/translate and type in Terminal:
+14. Go to /CloudComputing/CloudComputingProject/Translator/translate and type in Terminal:
       - Python3 manage.py migrate
       - Python3 manage.py runserver 0.0.0.0:80
       
-14. Open your browser and type in: <IP_ADRESS>:80/speaker (for example: http://35.184.11.167:80/speaker/)
+15. Open your browser and type in: <IP_ADRESS>:80/speaker (for example: http://35.184.11.167:80/speaker/)
 
 // Make sure that in your compute engines settings "Zugriffsbereiche für Cloud API" 
 is set to "Uneingeschränkten Zugriff auf alle Cloud-APIs zulassen"
