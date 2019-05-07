@@ -1,0 +1,25 @@
+
+html {
+    font-size: 30px
+}
+body {
+    background: rgba(208,228,245,0.04) url("cloudcomp.jpg") no-repeat scroll 100% 0%;
+    background-size: 70%
+}
+
+h1.trans_result {
+    font-size: 1.8rem;
+}
+div#main {
+    padding: 20px;
+}
+div#translation {
+    padding-top: 10px;
+    background-color: light blue;
+    border-style: solid;
+    border: blue;
+    border-radius: 3px;
+}
+label {
+    padding: 10px;
+}

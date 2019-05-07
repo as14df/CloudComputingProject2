@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page.title}}</title>
+    {% load static %}
+    <!--link rel="stylesheet" type="text/css" href="{% static 'speaker/main.css' %}"-->
+
+    <!-- Bootstrap -->
+    <!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"-->
+
+    <!-- styles -->
+    <link href="{% static 'speaker/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'speaker/css/bootstrap-responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'speaker/css/prettyPhoto.css' %}" rel="stylesheet">
+    <link href="{% static 'speaker/font/stylesheet.css' %}" rel="stylesheet">
+    <link href="{% static 'speaker/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'speaker/css/flexslider.css' %}" rel="stylesheet">
+    <link href="{% static 'speaker/css/sequencejs.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'speaker/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'speaker/color/default.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'speaker/ico/icon.ico' %}">
+
+  </head>
+  <body>
+
+    <!-- start top -->
+    <div id="topnav" class="navbar navbar-fixed-top fixed">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="logo">
+            <a class="brand" href="/speaker">TheTranslator<!--img src="img/logo.png" alt=""--></a>
+          </div>
+          <div class="navigation">
+            <nav>
+              <ul class="nav pull-right">
+                <li class="current"><a href="#featured">Translate</a></li>
+                <li><a href="/speaker/about">About</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  <section id="contact" class="section">
+    <div class="container">
+    <div class="row">
+        <div class="span12">
+          <form action="{% url 'index' %}" method="post" role="form">
+            <ul class="contact-list">
+                {{trans.fromLang}} <span style="color:#ef6603"> > </span> {{trans.toLang}} &nbsp;&nbsp;&nbsp;&nbsp; <button class="btn btn-large btn-theme" type="submit" name="changeLang" id="send" style="padding: 5px 10px;" ><img src="{% static 'speaker/images/twoArrows.png' %}" width="15" style="margin-bottom: 0px;" /></button>
+              <li class="form-group">
+                <li class="form-group">                    
+                  <textarea class="form_textarea" name="msg1" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="{{trans.fromLang}}">{{trans.msg1}}</textarea>                  
+                    <span style="color:#ef6603"> > </span>
+                  <textarea class="form_textarea" name="msg2" rows="12" readonly="true" data-rule="required" data-msg="Please write something for us" placeholder="{{trans.toLang}}">{{trans.msg2}}</textarea>
+                  <div class="validation"></div>
+                </li>
+                <li class="last">
+                  <button class="btn btn-large btn-theme" type="submit" name="translate" id="send">Übersetzen</button>
+                  
+                  <input type="hidden" name="fromLang" value="{{trans.fromLang}}"/>
+                  <input type="hidden" name="toLang" value ="{{trans.toLang}}"/>
+                </li>
+            </ul>
+          </form>
+          <!-- end contact form -->
+
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+    <div class="verybottom">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="aligncenter">
+              <div class="logo">
+                <a class="brand" href="">
+                                TheTranslator
+                            </a>
+              </div>
+              <p></p>
+              <p>
+                &copy; TheTranslator 2019
+              </p>
+              <div class="credits">
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+        
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+
+  <!-- Javascript Library Files -->
+  <script src="{% static 'speaker/js/jquery.min.js' %}"></script>
+  <script src="{% static 'speaker/js/jquery.easing.js' %}"></script>
+  <script src="{% static 'speaker/js/bootstrap.js' %}"></script>
+  <script src="{% static 'speaker/js/jquery.lettering.js' %}"></script>
+  <script src="{% static 'speaker/js/parallax/jquery.parallax-1.1.3.js' %}"></script>
+  <!--script src="{% static 'speaker/js/nagging-menu.js' %}"></script-->
+  <script src="{% static 'speaker/js/sequence.jquery-min.js' %}"></script>
+  <script src="{% static 'speaker/js/sequencejs-options.sliding-horizontal-parallax.js' %}"></script>
+  <script src="{% static 'speaker/js/portfolio/jquery.quicksand.js' %}"></script>
+  <script src="{% static 'speaker/js/portfolio/setting.js' %}"></script>
+  <script src="{% static 'speaker/js/jquery.scrollTo.js' %}"></script>
+  <script src="{% static 'speaker/js/jquery.nav.js' %}"></script>
+  <script src="{% static 'speaker/js/modernizr.custom.js' %}"></script>
+  <script src="{% static 'speaker/js/prettyPhoto/jquery.prettyPhoto.js' %}"></script>
+  <script src="{% static 'speaker/js/prettyPhoto/setting.js' %}"></script>
+  <script src="{% static 'speaker/js/jquery.flexslider.js' %}"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'speaker/contactform/contactform.js' %}"></script>
+
+  <!-- Template Custom Javascript File -->
+  <script src="{% static 'speaker/js/custom.js' %}"></script>
+
+  </body>
+</html>
