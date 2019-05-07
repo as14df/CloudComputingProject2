@@ -24,7 +24,7 @@
 9. Type in terminal: 
       - sudo service docker start			  # start docker service
       - sudo docker pull mysql          # download mysql image
-      - sudo docker docker run --name mysql_container -e MYSQL_ROOT_PASSWORD=admin123 -d mysql:latest # create docker container
+      - sudo docker run --name mysql_container -e MYSQL_ROOT_PASSWORD=admin123 -d mysql:latest # create docker container
       
       
 ## Configure Database
