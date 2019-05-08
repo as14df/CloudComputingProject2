@@ -4,7 +4,7 @@
 
 1. If you don't have ansible already installed, install it first
 
-2. Dowload the folder "Automatisierung" under [this link](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/as14df/CloudComputingProject2/tree/master/Automatisierung) and unzip it anywhere on your local machine
+2. Dowload the subfolder **Automatisierung** under [this link](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/as14df/CloudComputingProject2/tree/master/Automatisierung) and unzip it anywhere on your local machine
 
 3. Open the file **hosts**
 
@@ -12,7 +12,7 @@
 
 5. Open terminal in this folder
 
-6. Type in terminal: **ansible-playbook getcurl.yml***
+6. Type in terminal: **ansible-playbook getcurl.yml**
 
 7. Wait until ansible finished the installation
 
