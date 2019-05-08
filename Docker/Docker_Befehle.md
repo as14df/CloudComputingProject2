@@ -1,6 +1,6 @@
 # Allgemeine Docker Befehle
 
-## Gegebenenfalls docker (neu) starten
+## Docker (neu) starten
 * **sudo service docker stop**			  # Docker service stoppen
 * **sudo service docker start**		  # Docker service starten
 
