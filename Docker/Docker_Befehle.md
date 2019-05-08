@@ -39,7 +39,7 @@ parameter:
 ## Neues image aus container erstellen
 * **docker commit [NameContainer|IdContainer] [NameImage]**
 
-# Tar image zu images hinzufügen
+## Tar image zu images hinzufügen
 * **sudo docker load < [NameImage].tar**
 
 
