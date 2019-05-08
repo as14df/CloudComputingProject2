@@ -1,9 +1,0 @@
-# Das Inventory
-
-# localhost kann auch im Inventory stehen
-localhost#
-
-# Server Gruppen:
-
-[ServerGruppe]
-35.238.161.251 ansible_python_interpreter=/usr/bin/python3 # IP Adresse der Cloud Compute Engine
