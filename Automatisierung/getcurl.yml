@@ -1,0 +1,45 @@
+---
+# Beginn des Plays
+- name: Main Play 
+  hosts: ServerGruppe
+  become: true
+
+  # Beginn der Task LISTE
+  tasks:
+
+    # Installations with apt
+    - name: install tree, git, pip, docker, docker.io
+      apt: 
+        name: ['tree', 'git', 'python3-pip', 'docker', 'docker.io']
+        state: present
+        update_cache: yes
+      
+    # Installations with pip    
+    - name: install django, google-cloud-translate
+      pip: 
+        name: ['django', 'google-cloud-translate']
+        state: present
+
+    # Create directory for git project + clone project
+    - name: create directory for git + clone project
+      file:
+        path: /home/ansible/projekt
+        state: directory
+
+    - git:
+        repo: https://github.com/as14df/CloudComputingProject.git
+        dest: /home/ansible/projekt
+        force: yes
+
+    # change firewall rules
+    - name: change firewall rules allow 22, 80, 443, deny others
+      shell: |
+        ufw allow 22
+        ufw allow 80
+        ufw allow 443
+        ufw default deny
+
+    # enable firewall
+    - name: enable firewall rules
+      shell: yes 'y' | ufw enable
+
