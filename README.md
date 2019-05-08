@@ -6,15 +6,11 @@
 
 2. Dowload the subfolder **Automatisierung** under [this link](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/as14df/CloudComputingProject2/tree/master/Automatisierung) and unzip it anywhere on your local machine
 
-3. Open the file **hosts**
+3. Open the file **hosts** and paste the ip adress of your compute engine after **[ServerGruppe]**  and save the file
 
-4. Paste the ip adress of your compute engine after **[ServerGruppe]**  and save the file
+4. Open terminal in this folder and type in it: **ansible-playbook getcurl.yml**
 
-5. Open terminal in this folder
-
-6. Type in terminal: **ansible-playbook getcurl.yml**
-
-7. Wait until ansible finished the installation
+5. Wait until ansible finished the installation
 
 
 ## Create a mysql docker container
